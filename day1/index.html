@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drum Kit | Day 1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+
+<body>
+  <div class="container mx-auto h-full">
+    <div class="flex flex-col space-y-4 items-center">
+      <h1 class="text-4xl">Drum Kit</h1>
+      <div class="flex space-x-4">
+        <button id="KeyA" data-key="KeyA"
+          class="drum-keys px-6 py-3 border-2 border-black text-center rounded cursor-pointer shadow-md hover:shadow-lg">
+          <kbd class="text-xl">A</kbd>
+          <p>CLAP</p>
+        </button>
+        <button id="KeyS" data-key="KeyS"
+          class="drum-keys px-6 py-3 border-2 border-black text-center rounded cursor-pointer shadow-md hover:shadow-lg">
+          <kbd class="text-xl">S</kbd>
+          <p>HIHAT</p>
+        </button>
+        <button id="KeyD" data-key="KeyD"
+          class="drum-keys px-6 py-3 border-2 border-black text-center rounded cursor-pointer shadow-md hover:shadow-lg">
+          <kbd class="text-xl">D</kbd>
+          <p>KICK</p>
+        </button>
+        <button id="KeyF" data-key="KeyF"
+          class="drum-keys px-6 py-3 border-2 border-black text-center rounded cursor-pointer shadow-md hover:shadow-lg">
+          <kbd class="text-xl">F</kbd>
+          <p>OPENHAT</p>
+        </button>
+        <button id="KeyG" data-key="KeyG"
+          class="drum-keys px-6 py-3 border-2 border-black text-center rounded cursor-pointer shadow-md hover:shadow-lg">
+          <kbd class="text-xl">G</kbd>
+          <p>BOOM</p>
+        </button>
+        <button id="KeyH" data-key="KeyH"
+          class="drum-keys px-6 py-3 border-2 border-black text-center rounded cursor-pointer shadow-md hover:shadow-lg">
+          <kbd class="text-xl">H</kbd>
+          <p>RIDE</p>
+        </button>
+        <button id="Keyj" data-key="KeyJ"
+          class="drum-keys px-6 py-3 border-2 border-black text-center rounded cursor-pointer shadow-md hover:shadow-lg">
+          <kbd class="text-xl">J</kbd>
+          <p>SNARE</p>
+        </button>
+        <button id="KeyK" data-key="KeyK"
+          class="drum-keys px-6 py-3 border-2 border-black text-center rounded cursor-pointer shadow-md hover:shadow-lg">
+          <kbd class="text-xl">K</kbd>
+          <p>TOM</p>
+        </button>
+        <button id="KeyL" data-key="KeyL"
+          class="drum-keys px-6 py-3 border-2 border-black text-center rounded cursor-pointer shadow-md hover:shadow-lg">
+          <kbd class="text-xl">L</kbd>
+          <p>TINK</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <audio src="./sounds/clap.wav" data-key="KeyA"></audio>
+  <audio src="./sounds/hihat.wav" data-key="KeyS"></audio>
+  <audio src="./sounds/kick.wav" data-key="KeyD"></audio>
+  <audio src="./sounds/openhat.wav" data-key="KeyF"></audio>
+  <audio src="./sounds/boom.wav" data-key="KeyG"></audio>
+  <audio src="./sounds/ride.wav" data-key="KeyH"></audio>
+  <audio src="./sounds/snare.wav" data-key="KeyJ"></audio>
+  <audio src="./sounds/tom.wav" data-key="KeyK"></audio>
+  <audio src="./sounds/tink.wav" data-key="KeyL"></audio>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
