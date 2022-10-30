@@ -1,0 +1,6 @@
+.played {
+
+  transform: scale(1.06);
+  background-image: linear-gradient(to left bottom, #4175c3, #c28022);
+  transition: all 0.25ms;
+}
