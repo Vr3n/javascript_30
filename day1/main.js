@@ -44,10 +44,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("button.drum-keys").forEach((item) => {
     item.addEventListener("click", (e) => {
-      e.target.classList.add("played");
+      const currentElement = e.currentTarget;
+      currentElement.classList.add("played");
+
+      const keyCode = currentElement.dataset.key;
+
+      const drumAudio = document.querySelector(`audio[data-key="${keyCode}"]`);
 
       setTimeout(() => {
-        e.target.classList.remove("played");
+        drumAudio.play();
+        currentElement.classList.remove("played");
       }, 200);
     });
   });
